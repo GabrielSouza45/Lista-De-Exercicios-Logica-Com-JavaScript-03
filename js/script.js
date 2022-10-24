@@ -380,15 +380,16 @@ function votacao() {
         let porcValidosB = validosB * 100 / eleitores;
         let porcValidosC = validosC * 100 / eleitores;
 
-        nulos = nulos * 100 / eleitores;
-        brancos = brancos * 100 / eleitores;
+        let porcnulos = nulos * 100 / eleitores;
+        let porcbrancos = brancos * 100 / eleitores;
 
-        document.getElementById("resultado").innerHTML = (`Porcentagem de votos ${a}: ${porcValidosA.toFixed(2)}% com ${validosA} votos.
+        document.getElementById("resultado").innerHTML = (` Total de eleitores: ${eleitores}.
+                                                            \nPorcentagem de votos ${a}: ${porcValidosA.toFixed(2)}% com ${validosA} votos.
                                                             \nPorcentagem de votos ${b}: ${porcValidosB.toFixed(2)}% com ${validosB} votos.
                                                             \nPorcentagem de votos ${c}: ${porcValidosC.toFixed(2)}% com ${validosC} votos.
                                                             \n
-                                                            \nProcentagem de votos brancos: ${brancos.toFixed(2)}%.
-                                                            \nProcentagem de votos nulos: ${nulos.toFixed(2)}%.`);
+                                                            \nProcentagem de votos brancos: ${porcnulos.toFixed(2)}% com ${nulos} votos.
+                                                            \nProcentagem de votos nulos: ${porcbrancos.toFixed(2)}% com ${brancos} votos.`);
     } else if (comparacao < eleitores) {
         alert("Erro: Quantidade de votos menor que a de eleitores.");
     } else {

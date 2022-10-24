@@ -151,7 +151,7 @@ h3 {
 }
 
 .resposta {
-    width: 50%;
+    width: 40%;
     height: 25vh;
     text-align: center;
     border-radius: 20px;
@@ -177,17 +177,24 @@ h3 {
     background: var(--main);
     color: #fff;
     border: 1px solid var(--border);
-    transition: all .3s ease;
+    transition: all .5s ease;
     position: relative;
     bottom: 7%;
+    border-left: none;
+    border-right: none;
 }
 
 .button:hover {
-    transition: all .3s ease;
+    transition: all .5s ease;
     background: rgb(0, 37, 56);
     color: rgb(165, 165, 165);
     box-shadow: inset 0 -2px 8px var(--border);
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-top: none;
+    border-bottom: none;
 }
+
 
 .footer {
     position: fixed;
